@@ -1,0 +1,10 @@
+*.pyc
+*.png
+
+*.pt
+*.pth
+networks/backbones/pretrained/*
+checkpoints
+.idea/**
+**/**/.DS_Store
+logs
