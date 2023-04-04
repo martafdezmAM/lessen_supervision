@@ -5,8 +5,6 @@ import numpy as np
 
 
 def process_img(args, validation=False):
-	import pdb
-	pdb.set_trace()
     
 	im = cv2.imread(args.IMG_PATH)
 
