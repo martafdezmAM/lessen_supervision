@@ -4,7 +4,7 @@ import tqdm
 import torch
 import numpy as np
 
-from utils import results_common_utils as common_utils
+from seg_kanezaki.code.utils import common as common_utils
 from seg_kanezaki.code.utils.data_preprocessing import process_img
 
 

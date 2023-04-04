@@ -1,0 +1,100 @@
+{
+    "TRAIN_CONFIGURATION": "base_folder",
+    "DATA_INFO": "metaldam",
+    "OPTUNA": false,
+    "OPTIMIZER": "sgd",
+    "CKPT": "",
+    "COMMON": {
+        "CROP_BAR_SZ": 65,
+        "CLAHE": false,
+        "DATA_AUGM": false,
+        "BLUR": false,
+        "NCHANNEL": 100,
+        "MAXITER": 2000,
+        "MINLABELS": null,
+        "LR": 0.1,
+        "NCONV": 5,
+        "SUPERPIXEL_ALGO": "Felzenszwalb",
+        "NUM_SUPERPIXELS": 4000,
+        "COMPACTNESS_VALUE": 20,
+        "FZ_SIGMA": 0.8,
+        "FZ_SCALE": 10,
+        "FZ_MIN_SIZE": 10
+    },
+    "BASE": {
+        "IMG_PATH": "",
+        "DIR_LABEL_PATH": "",
+        "PRED_SAVE_PATH": "../../experiments/metaldam/"
+    },
+    "BASE_FOLDER": {
+        "DIR_PATH": "C:/Users/MartaFern\u00e1ndez/workspace/lessen_supervision/data/metaldam/n20_train_images/",
+        "DIR_LABEL_PATH": "C:/Users/MartaFern\u00e1ndez/workspace/lessen_supervision/data/metaldam/n20_train_masks/",
+        "DIR_SAVE_PATH": ""
+    },
+    "OPTUNA_T": {
+        "DATA_AUGM": "categorical",
+        "OPTIMIZER": "categorical",
+        "NCHANNEL": "int",
+        "MAXITER": "int",
+        "LR": "categorical",
+        "NCONV": "int",
+        "NUM_SUPERPIXELS": "int",
+        "COMPACTNESS_VALUE": "int",
+        "FZ_SCALE": "int",
+        "FZ_MIN_SIZE": "int"
+    },
+    "OPTUNA_V": {
+        "N_TRIALS": 20,
+        "DATA_AUGM": [
+            true,
+            false
+        ],
+        "OPTIMIZER": [
+            "adam",
+            "sgd",
+            "asgd"
+        ],
+        "NCHANNEL": [
+            25,
+            75,
+            25
+        ],
+        "MAXITER": [
+            1000,
+            3000,
+            2000
+        ],
+        "LR": [
+            0.005,
+            0.01,
+            0.05,
+            0.1
+        ],
+        "NCONV": [
+            2,
+            6,
+            1
+        ],
+        "NUM_SUPERPIXELS": [
+            2000,
+            4000,
+            6000
+        ],
+        "COMPACTNESS_VALUE": [
+            15,
+            20,
+            25
+        ],
+        "FZ_SCALE": [
+            1,
+            10,
+            100
+        ],
+        "FZ_MIN_SIZE": [
+            10,
+            30,
+            100
+        ]
+    },
+    "DIR_SAVE_PATH": "SP_metaldam_base_folder_2023-04-04_203129"
+}
