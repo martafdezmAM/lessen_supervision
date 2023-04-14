@@ -14,22 +14,7 @@ In case you want to modify the library and run it with your local changes:
 ```
 
 ## 2. Unsupervised methods
-### 2.1 IIC - Invariant Information Clustering
-[Paper](https://arxiv.org/abs/1807.06653) [Code](https://github.com/xu-ji/IIC)
-#### Train:
-1. Create/modify an ".config" file with the configuration that will be used for training the model
-2. Run training script:
-```bash
-    cd models/iic/code/scripts/
-    python segmentation_twohead_launch.py --config path_config_file
-```
-#### Train with hyper-parameter optimization:
-We use Optuna hyperparameter optimization framework to automate hyperparameter search by running:
-```bash
-    cd models/iic/code/scripts/
-    python segmentation_twohead_launch.py --config path_config_file --optuna
-```
-### 2.2 Unsupervised image segmentation by backpropagation
+### 2.1 Unsupervised image segmentation by backpropagation
 [Paper](https://kanezaki.github.io/pytorch-unsupervised-segmentation/ICASSP2018_kanezaki.pdf) [Code](https://github.com/kanezaki/pytorch-unsupervised-segmentation)
 #### Train
 1. Modify *models/seg_kanezaki/config_SP.py* file with the configuration that will be used for training the model
@@ -39,7 +24,7 @@ We use Optuna hyperparameter optimization framework to automate hyperparameter s
     python train.py --method sp
 ```
 
-### 2.3 Unsupervised Learning of Image Segmentation Based on Differentiable Feature Clustering
+### 2.2 Unsupervised Learning of Image Segmentation Based on Differentiable Feature Clustering
 [Paper](https://arxiv.org/abs/2007.09990) [Code](https://github.com/kanezaki/pytorch-unsupervised-segmentation-tip)
 #### Train
 1. Modify *models/seg_kanezaki/config_ST.py* file with the configuration that will be used for training the model
@@ -60,3 +45,6 @@ We use Optuna hyperparameter optimization framework to automate hyperparameter s
     cd models/seg_kanezaki/code/scripts/
     python train.py --method st
 ```
+
+### 3.2 Point-based: PixelPick 
+A modified version of  [Code](https://github.com/NoelShin/PixelPick) using [code](https://github.com/qubvel/segmentation_models.pytorch)
